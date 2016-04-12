@@ -31,6 +31,6 @@ var contenidoWeb = '';
   
 /*console.log(contenidoWeb.description);*/
   
-  return contenidoWeb.featured;
+  return contenidoWeb;
 
 }
