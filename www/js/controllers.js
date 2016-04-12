@@ -9,74 +9,44 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
+  
 })
 
-.controller('noticiasCtrl', function($scope) {
-  $scope.playlists = devuelveLista('noticias');
+.controller('noticiasCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('noticias');
 })
 
-.controller('deportesCtrl', function($scope) {
-  $scope.playlists = devuelveLista('deportes');
+.controller('deportesCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('deportes');
 })
 
-.controller('economiaCtrl', function($scope) {
-  $scope.playlists = devuelveLista('economia');
+.controller('economiaCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('economia');
 })
 
-.controller('comunidadCtrl', function($scope) {
-  $scope.playlists = devuelveLista('comunidad');
+.controller('comunidadCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('comunidad');
 })
 
-.controller('vidaCtrl', function($scope) {
-  $scope.playlists = devuelveLista('vida');
+.controller('vidaCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('vida');
 })
 
-.controller('socialesCtrl', function($scope) {
-  $scope.playlists = devuelveLista('sociales');
+.controller('socialesCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('sociales');
 })
 
-.controller('parentesisCtrl', function($scope) {
-  $scope.playlists = devuelveLista('parentesis');
+.controller('parentesisCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('parentesis');
 })
 
-.controller('minianunciosCtrl', function($scope) {
-  $scope.playlists = devuelveLista('minianuncios');
+.controller('minianunciosCtrl', function($scope, Prensa) {
+  $scope.playlists = devuelveLiPrensa.allsta('minianuncios');
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = devuelveLista();
-})
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-	$scope.playlists = devuelveLista($stateParams.playlistId);
+
+.controller('PlaylistCtrl', function($scope, $stateParams, Prensa) {
+	$scope.playlists = Prensa.get($stateParams.playlistId);
+	
 });

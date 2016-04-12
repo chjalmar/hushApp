@@ -41,42 +41,41 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('noticiasCtrl', function($scope) {
-  $scope.playlists = devuelveLista('noticias');
+.controller('noticiasCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('noticias');
 })
 
-.controller('deportesCtrl', function($scope) {
-  $scope.playlists = devuelveLista('deportes');
+.controller('deportesCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('deportes');
 })
 
-.controller('economiaCtrl', function($scope) {
-  $scope.playlists = devuelveLista('economia');
+.controller('economiaCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('economia');
 })
 
-.controller('comunidadCtrl', function($scope) {
-  $scope.playlists = devuelveLista('comunidad');
+.controller('comunidadCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('comunidad');
 })
 
-.controller('vidaCtrl', function($scope) {
-  $scope.playlists = devuelveLista('vida');
+.controller('vidaCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('vida');
 })
 
-.controller('socialesCtrl', function($scope) {
-  $scope.playlists = devuelveLista('sociales');
+.controller('socialesCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('sociales');
 })
 
-.controller('parentesisCtrl', function($scope) {
-  $scope.playlists = devuelveLista('parentesis');
+.controller('parentesisCtrl', function($scope, Prensa) {
+  $scope.playlists = Prensa.all('parentesis');
 })
 
-.controller('minianunciosCtrl', function($scope) {
-  $scope.playlists = devuelveLista('minianuncios');
+.controller('minianunciosCtrl', function($scope, Prensa) {
+  $scope.playlists = devuelveLiPrensa.allsta('minianuncios');
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = devuelveLista();
-})
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-	$scope.playlists = devuelveLista($stateParams.*);
+
+.controller('PlaylistCtrl', function($scope, $stateParams, Prensa) {
+	$scope.playlists = Prensa.get($stateParams.playlistId);
+	
 });

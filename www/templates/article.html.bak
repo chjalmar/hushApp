@@ -1,10 +1,10 @@
-<ion-view view-title="Articulo">
+<ion-view view-title={{playlists.data.title}}>
   <ion-content>
-    <h1>DALE</h1>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="playlist in playlists.featured" type="item-text-wrap" href="#/tab/articulo/{{playlist.id}}">
-        <h2>{{playlist.data.title}}</h2>
-      </ion-item>
-    </ion-list> 
+    <h1>{{playlists.data.title}}</h1>
+    
+      <h5 ng-repeat="paragraph in playlists.data.paragraphs">
+        {{paragraph}}
+      </h5>
+     
   </ion-content>
 </ion-view>
