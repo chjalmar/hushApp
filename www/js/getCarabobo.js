@@ -1,20 +1,10 @@
-function devuelveLista() { 
+function devuelveLista($section) { 
 
-  var playlists = [
-      { title: 'Lolo', id: 1 },
-      { title: 'Chill', id: 2 },
-      { title: 'Dubstep', id: 3 },
-      { title: 'Indie', id: 4 },
-      { title: 'Rap', id: 5 },
-      { title: 'Cowbell', id: 6 },
-      { title: 'Chirri', id: 7 }
-    ];
-    
   
 var contenidoWeb = '';
 	
 			$.ajax({ type: 'GET',   
-				 url: 'http://192.34.57.3:56137/api/section/noticias',
+				 url: 'http://192.34.57.3:56137/api/section/' + $section,
 				 async: false,
 				 success : function(text)
 				 {
@@ -29,8 +19,9 @@ var contenidoWeb = '';
   - obtener las categorías con las que quisiera crear el menú de la izquierda */
   
   
-/*console.log(contenidoWeb.description);*/
+  console.log($section);
   
-  return contenidoWeb.featured;
+  return contenidoWeb;
 
 }
+

@@ -78,5 +78,5 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-	$scope.playlists = devuelveLista($stateParams.playlistId);
+	$scope.playlists = devuelveLista($stateParams.*);
 });
