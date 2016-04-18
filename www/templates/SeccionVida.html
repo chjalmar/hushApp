@@ -1,8 +1,8 @@
-<ion-view view-title="Seccion">
+<ion-view view-title="{{playlists.title}}">
   <ion-content>
-    <h1>{{playlists.title}}</h1>
+    <h3>Noticias Destacadas</h3>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="playlist in playlists.featured" type="item-text-wrap" href="#/app/article/{{playlist.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="playlist in playlists.featured" type="item-text-wrap" href="#/app/vida/article/{{playlist.id}}">
         <h2>{{playlist.data.title}}</h2>
         <p>{{playlist.data.description}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>

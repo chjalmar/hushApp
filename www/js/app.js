@@ -40,102 +40,176 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('app.noticias', {
-      cache: false,
+      
       url: '/noticias',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionNoticias.html',
           controller: 'noticiasCtrl'
         }
       }
     })
 
   .state('app.deportes', {
-      cache: false,
+      
       url: '/deportes',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionDeportes.html',
           controller: 'deportesCtrl'
         }
       }
     })
     
     .state('app.economia', {
-      cache: false,
+      
       url: '/economia',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionEconomia.html',
           controller: 'economiaCtrl'
         }
       }
     })
     
     .state('app.comunidad', {
-      cache: false,
+      
       url: '/comunidad',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionComunidad.html',
           controller: 'comunidadCtrl'
         }
       }
     })
     
     .state('app.vida', {
-      cache: false,
+      
       url: '/vida',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionVida.html',
           controller: 'vidaCtrl'
         }
       }
     })
     
     .state('app.sociales', {
-      cache: false,
+      
       url: '/sociales',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionSociales.html',
           controller: 'socialesCtrl'
         }
       }
     })
     
     .state('app.parentesis', {
-      cache: false,
+      
       url: '/parentesis',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionParentesis.html',
           controller: 'parentesisCtrl'
         }
       }
     })
     
     .state('app.minianuncios', {
-      cache: false,
+      
       url: '/minianuncios',
       views: {
         'menuContent': {
-          templateUrl: 'templates/section.html',
+          templateUrl: 'templates/SeccionMinianuncios.html',
           controller: 'minianunciosCtrl'
         }
       }
     })
+
+//States para noticias individuales por seccion
       
-  .state('app.single', {
-    url: '/article/:playlistId',
+  .state('app.singleNoticias', {
+    url: '/noticias/article/:playlistId',
     views: {
       'menuContent': {
         templateUrl: 'templates/article.html',
-        controller: 'PlaylistCtrl'
+        controller: 'NoticiasSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleDeportes', {
+    
+    url: '/deportes/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'DeportesSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleEconomia', {
+    url: '/economia/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'EconomiaSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleComunidad', {
+    url: '/comunidad/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'ComunidadSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleVida', {
+    url: '/vida/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'VidaSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleSociales', {
+    url: '/sociales/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'SocialesSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleParentesis', {
+    url: '/parentesis/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'ParentesisSingleCtrl'
+      }
+    }
+  })
+  
+  .state('app.singleMinianuncios', {
+    url: '/minianuncios/article/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/article.html',
+        controller: 'MinianunciosSingleCtrl'
       }
     }
   });
+  
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/noticias');
 });

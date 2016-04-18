@@ -1,0 +1,21 @@
+<ion-view view-title="{{playlists.title}}">
+  <ion-content>
+    <h3>Noticias Destacadas</h3>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="playlist in playlists.featured" type="item-text-wrap" href="#/app/noticias/article/{{playlist.id}}">
+        <h2>{{playlist.data.title}}</h2>
+        <p>{{playlist.data.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list> 
+<!--    <h3>Sugerencias</h3>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="playlist in playlists.suggestions" type="item-text-wrap" href="#/app/noticias/article/{{playlist.id}}">
+        <h2>{{playlist.url}}</h2>
+        <p>{{playlist.name}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+-->    
+  </ion-content>
+</ion-view>
