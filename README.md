@@ -15,6 +15,6 @@ We are motivated by recent informational events in politically unstable countrie
 
 Prevents people from reaching up to date information about things happening in their countries, or sometimes even in their own neighbourhoods.
 
-This app also responds to recent trends gazing towards going back to "real text" as an important type of Internet content, in times when immediacy (Twets, pictures or videos) is putting under question the real value of what we share online.
+This app also responds to recent trends gazing towards going back to "real text" as an important type of Internet content, in times when immediacy (tweets, pictures or videos) is putting under question the real value of what we share online.
 
 Let's see what we can do about that...
